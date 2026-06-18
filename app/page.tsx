@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { hotel, amenities, rooms, faqs } from "@/data/hotel";
 
 export default function Home() {
@@ -85,8 +86,13 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {rooms.map((room) => (
                 <div key={room.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-                  <div className="bg-gray-200 h-48 flex items-center justify-center text-gray-400 text-sm">
-                    {room.name.ja}の写真
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={`/${room.images[0]}`}
+                      alt={`${room.name.ja} - ホテルプライムイン神田`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-5">
                     <div className="flex justify-between items-start mb-2">
@@ -103,13 +109,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 設備写真ギャラリー */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">館内施設</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[
+                { src: "/shower-1.jpg", alt: "ガラス張りシャワー室" },
+                { src: "/laundry-1.jpg", alt: "ドラム式洗濯機・洗面台" },
+                { src: "/netflix-tv-1.jpg", alt: "Netflix・大型Sony TV・ソファ" },
+                { src: "/toilet-1.jpg", alt: "独立トイレ・ウォシュレット" },
+                { src: "/imac-desk-1.jpg", alt: "iMac・ワークデスク" },
+                { src: "/sofa-kitchen-1.jpg", alt: "ソファ・キッチン設備" },
+              ].map((img) => (
+                <div key={img.src} className="relative h-48 rounded-2xl overflow-hidden">
+                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-3">
+                    <p className="text-white text-xs font-medium">{img.alt}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* 全設備リスト */}
-        <section id="amenities" className="py-14 px-4 bg-white">
+        <section id="amenities" className="py-14 px-4 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">全室完備の設備</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {amenities.map((item) => (
-                <div key={item.name} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50">
+                <div key={item.name} className="flex items-center gap-3 p-3 rounded-xl bg-white">
                   <span className="text-xl">{item.icon}</span>
                   <span className="text-sm text-gray-700">{item.name}</span>
                 </div>
