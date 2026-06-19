@@ -5,8 +5,8 @@ export const hotel = {
     en: "Hotel Prime Inn Kanda",
   },
   catchcopy: {
-    ja: "東京に、もうひとつの家を。神田・秋葉原エリア　全室アパートメント型ホテル",
-    en: "Your Tokyo Home. Apartment-style hotel in Kanda, steps from Akihabara.",
+    ja: "東京に、もうひとつの家を。神田・秋葉原エリアの充実設備ホテル",
+    en: "Your Tokyo Home. A hotel with premium amenities in Kanda, steps from Akihabara.",
   },
   address: {
     postalCode: "101-0054",
@@ -15,7 +15,7 @@ export const hotel = {
   },
   area: "神田・秋葉原",
   phone: "08070583086",
-  category: "アパートメントホテル",
+  category: "ホテル",
   website: "https://prime-inn.jp",
   checkIn: "17:00",
   checkOut: "11:00",

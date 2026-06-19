@@ -38,7 +38,7 @@ export default function Home() {
             </h2>
             <p className="text-gray-600 text-lg mb-8">
               iMac・Nintendo Switch 2・Netflix・Disney+・ポケットWi-Fi・ドラム式洗濯機完備。
-              <br />ホテルの快適さと、アパートの自由さを。
+              <br />上質な設備で、特別な滞在を。
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
