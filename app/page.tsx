@@ -167,8 +167,16 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center text-gray-500 text-sm">
-              Googleマップ（埋め込み予定）
+            <div className="rounded-2xl overflow-hidden h-64">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3182483474693!2d139.76142757625863!3d35.693785329283486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d0044c1dd9f%3A0x1b3554fe51d31118!2sHotel%20Prime%20Inn%20Kanda!5e0!3m2!1sja!2sjp!4v1781849561546!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </section>
