@@ -8,17 +8,17 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "ホテルプライムイン神田 | 神田・秋葉原 充実設備のホテル",
+  title: "ぷらっとハウス白金台 | 白金台 一棟貸し切り 最大11名",
   description:
-    "神田・秋葉原エリア徒歩圏内。iMac・Nintendo Switch 2・Netflix・Disney+・ポケットWi-Fi・ドラム式洗濯機完備のホテル。直接予約で最安値保証。",
+    "白金台駅徒歩2分。3階建て一棟まるごと貸し切り。駐車場2台無料・Netflix・Disney+・Nintendo Switch・10ギガインターネット完備。最大11名。ファミリー・グループ旅行に最適。",
   keywords:
-    "ホテルプライムイン神田, 神田ホテル, 秋葉原ホテル, iMacホテル, Nintendo Switch 2 ホテル, Netflix ホテル, 洗濯機付きホテル, 東京ファミリーホテル",
+    "ぷらっとハウス白金台, 白金台 一棟貸し切り, 白金台 民泊, 東京 貸し切り宿, ファミリー旅行 東京, グループ旅行 東京, 白金台 宿泊",
   openGraph: {
-    title: "ホテルプライムイン神田 | 神田・秋葉原 充実設備のホテル",
+    title: "ぷらっとハウス白金台 | 白金台 一棟貸し切り 最大11名",
     description:
-      "iMac・Switch 2・Netflix・Disney+・ポケットWi-Fi・洗濯機完備。神田・秋葉原エリアのホテル。",
-    url: "https://prime-inn.jp",
-    siteName: "Hotel Prime Inn Kanda",
+      "白金台駅徒歩2分。3階建て一棟貸し切り。駐車場2台・Netflix・Disney+完備。最大11名。",
+    url: "https://plat-house.jp",
+    siteName: "Plat House Shirokanedai",
     locale: "ja_JP",
     type: "website",
   },
