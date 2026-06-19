@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { hotel, amenities, rooms, faqs } from "@/data/hotel";
+import { getAllPosts } from "@/lib/blog";
 
 export default function Home() {
   const highlights = amenities.filter((a) => a.highlight);
+  const latestPosts = getAllPosts().slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -18,6 +21,7 @@ export default function Home() {
             <a href="#amenities" className="hover:text-gray-900">設備</a>
             <a href="#access" className="hover:text-gray-900">アクセス</a>
             <a href="#faq" className="hover:text-gray-900">FAQ</a>
+            <Link href="/blog" className="hover:text-gray-900">ブログ</Link>
           </nav>
           <a
             href="#booking"
@@ -180,6 +184,32 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ブログ */}
+        {latestPosts.length > 0 && (
+          <section className="py-14 px-4 bg-white">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">観光・旅行ガイド</h2>
+              <p className="text-center text-gray-500 mb-10">神田・秋葉原エリアの最新情報</p>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                {latestPosts.map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`}>
+                    <div className="border border-gray-100 rounded-2xl p-5 hover:shadow-md transition cursor-pointer h-full">
+                      <span className="text-xs text-gray-400 mb-2 block">{post.lang === "en" ? "🇬🇧 English" : "🇯🇵 日本語"} · {post.category}</span>
+                      <h3 className="font-bold text-gray-900 mb-2 text-sm">{post.title}</h3>
+                      <p className="text-xs text-gray-500 line-clamp-2">{post.excerpt}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center">
+                <Link href="/blog" className="text-sm text-gray-600 border border-gray-300 px-6 py-2 rounded-full hover:bg-gray-50 transition">
+                  記事をもっと見る →
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ */}
         <section id="faq" className="py-14 px-4 bg-white">
