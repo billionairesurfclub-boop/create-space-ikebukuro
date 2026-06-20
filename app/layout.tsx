@@ -8,6 +8,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "gXHCgYW1liWYzDHLdMnZqsms3IllJliPGWeecgZRK5E",
+  },
   title: "ぷらっとハウス白金台 | 白金台 一棟貸し切り 最大11名",
   description:
     "白金台駅徒歩2分。3階建て一棟まるごと貸し切り。駐車場2台無料・Netflix・Disney+・Nintendo Switch・10ギガインターネット完備。最大11名。ファミリー・グループ旅行に最適。",
