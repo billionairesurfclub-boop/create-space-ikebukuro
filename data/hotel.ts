@@ -1,17 +1,17 @@
 export const hotel = {
   id: "create-space-ikebukuro",
   name: {
-    ja: "クリエイトスペース池袋",
-    en: "Create Space Ikebukuro",
+    ja: "クリエイトスペース東池袋",
+    en: "Create Space Higashi-Ikebukuro",
   },
   catchcopy: {
-    ja: "池袋に、自分だけの快適空間を。全6室・充実設備のホテル",
-    en: "Your comfortable stay in Ikebukuro. 6 rooms with full amenities.",
+    ja: "東池袋に、自分だけの快適空間を。全6室・充実設備のホテル",
+    en: "Your comfortable stay in Higashi-Ikebukuro. 6 rooms with full amenities.",
   },
   address: {
-    postalCode: "171-0014",
-    ja: "東京都豊島区池袋2丁目50番4号",
-    en: "2-50-4 Ikebukuro, Toshima-ku, Tokyo 171-0014",
+    postalCode: "170-0013",
+    ja: "東京都豊島区東池袋2丁目50番4号",
+    en: "2-50-4 Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013",
   },
   area: "池袋",
   phone: "08070583086",
