@@ -8,6 +8,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "NBCzX_w_wF2RdfjdOVZcRXM0ZB57hSsgI35-j8f5dW8",
+  },
   title: "クリエイトスペース池袋 | 池袋 全6室・高速インターネット完備のホテル",
   description:
     "池袋駅徒歩10分。全6室・最大4名・高速インターネット・Netflix完備。ファミリー・グループ旅行・ビジネスに最適。公式サイト直接予約で最安値保証。",
