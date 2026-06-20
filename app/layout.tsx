@@ -8,20 +8,17 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  verification: {
-    google: "gXHCgYW1liWYzDHLdMnZqsms3IllJliPGWeecgZRK5E",
-  },
-  title: "ぷらっとハウス白金台 | 白金台 一棟貸し切り 最大11名",
+  title: "クリエイトスペース池袋 | 池袋 全6室・高速インターネット完備のホテル",
   description:
-    "白金台駅徒歩2分。3階建て一棟まるごと貸し切り。駐車場2台無料・Netflix・Disney+・Nintendo Switch・10ギガインターネット完備。最大11名。ファミリー・グループ旅行に最適。",
+    "池袋駅徒歩10分。全6室・最大4名・高速インターネット・Netflix完備。ファミリー・グループ旅行・ビジネスに最適。公式サイト直接予約で最安値保証。",
   keywords:
-    "ぷらっとハウス白金台, 白金台 一棟貸し切り, 白金台 民泊, 東京 貸し切り宿, ファミリー旅行 東京, グループ旅行 東京, 白金台 宿泊",
+    "クリエイトスペース池袋, 池袋 ホテル, 豊島区 ホテル, 池袋 ファミリーホテル, 池袋 グループ旅行, Netflix ホテル 池袋",
   openGraph: {
-    title: "ぷらっとハウス白金台 | 白金台 一棟貸し切り 最大11名",
+    title: "クリエイトスペース池袋 | 池袋 全6室・高速インターネット完備のホテル",
     description:
-      "白金台駅徒歩2分。3階建て一棟貸し切り。駐車場2台・Netflix・Disney+完備。最大11名。",
-    url: "https://plat-house.jp",
-    siteName: "Plat House Shirokanedai",
+      "池袋駅徒歩10分。全6室・Netflix・高速インターネット完備。最大4名。",
+    url: "https://create-space.jp",
+    siteName: "Create Space Ikebukuro",
     locale: "ja_JP",
     type: "website",
   },

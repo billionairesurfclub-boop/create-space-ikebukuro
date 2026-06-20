@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | ぷらっとハウス白金台`,
+    title: `${post.title} | クリエイトスペース池袋`,
     description: post.excerpt,
   };
 }
@@ -35,10 +35,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
       <div className="mt-16 bg-gray-900 text-white rounded-2xl p-8 text-center">
-        <p className="font-bold text-lg mb-2">ぷらっとハウス白金台</p>
-        <p className="text-gray-400 text-sm mb-6">白金台駅 徒歩2分・一棟貸し切り・最大11名</p>
+        <p className="font-bold text-lg mb-2">クリエイトスペース池袋</p>
+        <p className="text-gray-400 text-sm mb-6">池袋駅 徒歩10分・全6室・最大4名</p>
         <a
-          href="https://beds24.com/booking.php?propid=305756&referer=BookingLink"
+          href="https://beds24.com/booking.php?propid=276774&referer=BookingLink"
           className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition"
         >
           空室を確認して予約する

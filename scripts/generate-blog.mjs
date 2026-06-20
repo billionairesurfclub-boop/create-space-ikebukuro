@@ -1,5 +1,5 @@
 /**
- * ブログ記事自動生成スクリプト（ぷらっとハウス白金台）
+ * ブログ記事自動生成スクリプト（クリエイトスペース池袋）
  * 使い方: node scripts/generate-blog.mjs
  */
 
@@ -11,24 +11,23 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-// 記事テンプレート一覧
 const templates = [
   {
     type: "en-family",
     lang: "en",
     category: "Family Travel",
-    prompt: `Write a helpful blog article in English for families or groups visiting Tokyo who want to stay near Shirokanedai area.
-Property: Plat House Shirokanedai
-Location: 2 min walk from Shirokanedai station (Tokyo Metro Namboku Line / Toei Mita Line)
-Key features: Entire 3-story house, max 11 guests, free parking x2, Netflix, Disney+, Nintendo Switch, Pocket Wi-Fi, 10Gbps internet
-Price: from ¥40,000/night
-Booking: https://beds24.com/booking.php?propid=305756&referer=BookingLink
+    prompt: `Write a helpful blog article in English for families or groups visiting Tokyo who want to stay near Ikebukuro area.
+Property: Create Space Ikebukuro
+Location: 10 min walk from Ikebukuro station (JR, Tokyo Metro, Tobu, Seibu lines)
+Key features: 6 rooms total, max 4 guests per room, high-speed internet, Netflix, air conditioning
+Price: from ¥20,000/night
+Booking: https://beds24.com/booking.php?propid=276774&referer=BookingLink
 
 Write an engaging article (600-800 words) with:
-- A catchy title about family/group travel in Tokyo
-- Why renting an entire house is better than a hotel for families and groups
+- A catchy title about family/group travel in Ikebukuro Tokyo
+- Why Ikebukuro is a great base for Tokyo sightseeing
 - How the property features benefit families and groups
-- Nearby attractions in Shirokanedai/Minato area
+- Nearby attractions in Ikebukuro/Toshima area
 - A call to action to book directly
 
 Return as JSON:
@@ -43,19 +42,19 @@ Return as JSON:
     type: "ja-family",
     lang: "ja",
     category: "ファミリー旅行",
-    prompt: `白金台エリアへのファミリー・グループ旅行を計画している方向けのブログ記事を書いてください。
+    prompt: `池袋エリアへのファミリー・グループ旅行を計画している方向けのブログ記事を書いてください。
 
 物件情報：
-- 名称：ぷらっとハウス白金台
-- 場所：白金台駅（東京メトロ南北線・都営三田線）徒歩2分
-- 設備：3階建て一棟貸し切り・最大11名・駐車場2台無料・Netflix・Disney+・Nintendo Switch・ポケットWi-Fi・10ギガインターネット
-- 料金：¥40,000〜/泊
-- 予約：https://beds24.com/booking.php?propid=305756&referer=BookingLink
+- 名称：クリエイトスペース池袋
+- 場所：池袋駅（JR・東京メトロ・東武・西武）徒歩10分
+- 設備：全6室・最大4名・高速インターネット・Netflix・エアコン完備
+- 料金：¥20,000〜/泊
+- 予約：https://beds24.com/booking.php?propid=276774&referer=BookingLink
 
 600〜800字の記事を書いてください。構成：
-- 一棟貸し切りがホテルより家族・グループ旅行に向いている理由
-- ぷらっとハウス白金台の設備紹介
-- 白金台・港区エリアの観光スポット
+- 池袋エリアが東京観光の拠点として優れている理由
+- クリエイトスペース池袋の設備紹介
+- 池袋・豊島区エリアの観光スポット
 - 予約への誘導
 
 JSON形式で返してください：
@@ -70,17 +69,17 @@ JSON形式で返してください：
     type: "ja-sightseeing",
     lang: "ja",
     category: "観光情報",
-    prompt: `白金台・港区エリアの観光情報をまとめたブログ記事を書いてください。
+    prompt: `池袋・豊島区エリアの観光情報をまとめたブログ記事を書いてください。
 
 記事の最後に以下の物件を自然な流れで紹介してください：
-- ぷらっとハウス白金台（白金台駅 徒歩2分・一棟貸し切り・最大11名）
-- 予約：https://beds24.com/booking.php?propid=305756&referer=BookingLink
+- クリエイトスペース池袋（池袋駅 徒歩10分・全6室・最大4名）
+- 予約：https://beds24.com/booking.php?propid=276774&referer=BookingLink
 
 600〜800字の記事。構成：
-- 白金台・港区エリアの魅力
-- おすすめ観光スポット5〜7か所（白金台、広尾、六本木、麻布台など）
+- 池袋・豊島区エリアの魅力
+- おすすめ観光スポット5〜7か所（サンシャインシティ、東池袋、雑司が谷など）
 - グルメ・ショッピング情報
-- 一棟貸し切りでゆったり滞在の紹介
+- クリエイトスペース池袋でゆったり滞在の紹介
 
 JSON形式で返してください：
 {
@@ -110,8 +109,6 @@ async function generatePost(template) {
   });
 
   const text = message.content[0].text;
-
-  // JSONを抽出
   const match = text.match(/\{[\s\S]*\}/);
   if (!match) throw new Error("JSONが見つかりませんでした");
 
@@ -134,11 +131,9 @@ async function generatePost(template) {
   fs.writeFileSync(path.join(outDir, `${slug}.json`), JSON.stringify(post, null, 2), "utf-8");
 
   console.log(`✅ 完成: ${data.title}`);
-  console.log(`   ファイル: content/blog/${slug}.json`);
   return post;
 }
 
-// 実行
 const type = process.argv[2];
 const targets = type ? templates.filter((t) => t.type === type) : templates;
 
@@ -153,5 +148,3 @@ for (const t of targets) {
 }
 
 console.log("\n✅ 全記事の生成が完了しました！");
-console.log("次のコマンドでGitHubに送ってください:");
-console.log("  git add content/ && git commit -m \"ブログ記事追加\" && git push");

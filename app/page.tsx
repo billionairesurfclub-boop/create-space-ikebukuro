@@ -12,11 +12,11 @@ export default function Home() {
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
           <div>
-            <p className="text-xs text-gray-500">Plat House</p>
-            <h1 className="text-lg font-bold text-gray-900">白金台</h1>
+            <p className="text-xs text-gray-500">Create Space</p>
+            <h1 className="text-lg font-bold text-gray-900">池袋</h1>
           </div>
           <nav className="hidden md:flex gap-6 text-sm text-gray-600">
-            <a href="#rooms" className="hover:text-gray-900">間取り</a>
+            <a href="#rooms" className="hover:text-gray-900">客室</a>
             <a href="#amenities" className="hover:text-gray-900">設備</a>
             <a href="#access" className="hover:text-gray-900">アクセス</a>
             <a href="#faq" className="hover:text-gray-900">FAQ</a>
@@ -29,13 +29,13 @@ export default function Home() {
       <main>
         <section className="bg-gray-50 py-20 px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm text-gray-500 mb-3">Shirokanedai · Minato-ku Tokyo</p>
+            <p className="text-sm text-gray-500 mb-3">Ikebukuro · Toshima-ku Tokyo</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">{hotel.catchcopy.ja}</h2>
-            <p className="text-gray-600 text-lg mb-4">最大11名・駐車場2台無料・Netflix・Disney+・Nintendo Switch完備。</p>
-            <p className="text-gray-500 text-base mb-8">白金台駅徒歩2分。3階建て一棟まるごと貸し切り。</p>
+            <p className="text-gray-600 text-lg mb-4">全6室・最大4名・高速インターネット・Netflix完備。</p>
+            <p className="text-gray-500 text-base mb-8">池袋駅徒歩10分。観光・ビジネスに最適なホテル。</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#booking" className="bg-gray-900 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-gray-700 transition">今すぐ予約する</a>
-              <a href="#rooms" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full text-base hover:bg-gray-50 transition">間取りを見る</a>
+              <a href="#rooms" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full text-base hover:bg-gray-50 transition">客室を見る</a>
             </div>
             <p className="text-sm text-gray-400 mt-4">公式サイト直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
           </div>
@@ -43,10 +43,10 @@ export default function Home() {
 
         <section className="py-10 px-4 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">11名</p><p className="text-sm text-gray-500 mt-1">最大宿泊人数</p></div>
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">3階建</p><p className="text-sm text-gray-500 mt-1">一棟まるごと貸切</p></div>
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">80㎡</p><p className="text-sm text-gray-500 mt-1">広々とした空間</p></div>
-            <div className="p-4"><p className="text-3xl font-bold text-gray-900">2台</p><p className="text-sm text-gray-500 mt-1">無料駐車場</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">6室</p><p className="text-sm text-gray-500 mt-1">全客室数</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">4名</p><p className="text-sm text-gray-500 mt-1">各室最大人数</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">10分</p><p className="text-sm text-gray-500 mt-1">池袋駅から徒歩</p></div>
+            <div className="p-4"><p className="text-3xl font-bold text-gray-900">4階建</p><p className="text-sm text-gray-500 mt-1">201〜402号室</p></div>
           </div>
         </section>
 
@@ -66,13 +66,13 @@ export default function Home() {
 
         <section id="rooms" className="py-14 px-4 bg-gray-50">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">間取り・寝室</h2>
-            <p className="text-center text-gray-500 mb-10">3階建て一棟。寝室・リビング・サービスルームを完備。</p>
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">客室</h2>
+            <p className="text-center text-gray-500 mb-10">全6室・ダブルベッド×2・最大4名</p>
             <div className="grid md:grid-cols-3 gap-6">
               {rooms.map((room) => (
                 <div key={room.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image src={`/${room.images[0]}`} alt={room.name.ja} fill className="object-cover" />
+                  <div className="relative h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+                    <span className="text-4xl">🏨</span>
                   </div>
                   <div className="p-5">
                     <div className="flex justify-between items-start mb-2">
@@ -81,32 +81,6 @@ export default function Home() {
                     </div>
                     <p className="text-sm text-gray-500 mb-3">{room.bedType.ja} · 最大{room.maxGuests}名</p>
                     <p className="text-sm text-gray-600">{room.description.ja}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-14 px-4 bg-gray-50">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">館内写真</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[
-                { src: "/shiro-gaikan-01.jpg", alt: "外観" },
-                { src: "/shiro-living-01.jpg", alt: "リビング" },
-                { src: "/shiro-living-02.jpg", alt: "リビング" },
-                { src: "/shiro-bedroom1-01.jpg", alt: "寝室１" },
-                { src: "/shiro-bedroom2-01.jpg", alt: "寝室２" },
-                { src: "/shiro-bedroom3-01.jpg", alt: "寝室３" },
-                { src: "/shiro-kitchen-01.jpg", alt: "キッチン" },
-                { src: "/shiro-bath-01.jpg", alt: "バスルーム" },
-                { src: "/shiro-living-03.jpg", alt: "リビング" },
-              ].map((img) => (
-                <div key={img.src} className="relative h-48 rounded-2xl overflow-hidden">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-3">
-                    <p className="text-white text-xs font-medium">{img.alt}</p>
                   </div>
                 </div>
               ))}
@@ -144,25 +118,10 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-                <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-                  <span className="text-xl">🚗</span>
-                  <div>
-                    <p className="font-medium text-sm text-gray-900">無料駐車場 2台</p>
-                    <p className="text-xs text-gray-500">1階に駐車場完備</p>
-                  </div>
-                </div>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden h-64">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.1214027365631!2d139.72320839062888!3d35.638570698178256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b045db388d3%3A0x1b3e70eedb30d622!2z44CSMTA4LTAwNzEg5p2x5Lqs6YO95riv5Yy655m96YeR5Y-w77yU5LiB55uu77yR77yW4oiS77yV!5e0!3m2!1sja!2sjp!4v1781947368421!5m2!1sja!2sjp"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            <div className="rounded-2xl overflow-hidden h-64 bg-gray-200 flex items-center justify-center">
+              <p className="text-gray-500 text-sm">Googleマップ（準備中）</p>
             </div>
           </div>
         </section>
@@ -171,7 +130,7 @@ export default function Home() {
           <section className="py-14 px-4 bg-white">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">旅行・観光ガイド</h2>
-              <p className="text-center text-gray-500 mb-10">白金台・港区エリアの最新情報</p>
+              <p className="text-center text-gray-500 mb-10">池袋・豊島区エリアの最新情報</p>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {latestPosts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`}>
@@ -213,7 +172,7 @@ export default function Home() {
             <p className="text-gray-400 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
             <div className="bg-gray-800 rounded-2xl p-6 mb-6">
               <p className="text-3xl font-bold mb-1">¥{hotel.price.min.toLocaleString()}〜</p>
-              <p className="text-gray-400 text-sm">1泊あたり（税込）· 最大11名</p>
+              <p className="text-gray-400 text-sm">1泊あたり（税込）· 最大4名</p>
             </div>
             <a href={hotel.bookingUrl} className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-bold hover:bg-gray-100 transition">空室を確認して予約する</a>
           </div>
