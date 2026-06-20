@@ -1,5 +1,5 @@
 /**
- * ブログ記事自動生成スクリプト
+ * ブログ記事自動生成スクリプト（ぷらっとハウス白金台）
  * 使い方: node scripts/generate-blog.mjs
  */
 
@@ -17,18 +17,18 @@ const templates = [
     type: "en-family",
     lang: "en",
     category: "Family Travel",
-    prompt: `Write a helpful blog article in English for families visiting Tokyo who want to stay near Akihabara or Kanda area.
-Hotel: Hotel Prime Inn Kanda
-Location: 3 min walk from Awajicho station, 13 min from Akihabara
-Key features: iMac, Nintendo Switch 2, Netflix, Disney+, Pocket Wi-Fi, drum washing machine, glass shower, Emma Premium beds
-Price: from ¥30,000/night
-Booking: https://beds24.com/booking.php?propid=274118&referer=BookingLink
+    prompt: `Write a helpful blog article in English for families or groups visiting Tokyo who want to stay near Shirokanedai area.
+Property: Plat House Shirokanedai
+Location: 2 min walk from Shirokanedai station (Tokyo Metro Namboku Line / Toei Mita Line)
+Key features: Entire 3-story house, max 11 guests, free parking x2, Netflix, Disney+, Nintendo Switch, Pocket Wi-Fi, 10Gbps internet
+Price: from ¥40,000/night
+Booking: https://beds24.com/booking.php?propid=305756&referer=BookingLink
 
 Write an engaging article (600-800 words) with:
-- A catchy title about family travel in Tokyo/Akihabara area
-- Practical tips for families
-- How the hotel features benefit families
-- Nearby attractions suitable for families
+- A catchy title about family/group travel in Tokyo
+- Why renting an entire house is better than a hotel for families and groups
+- How the property features benefit families and groups
+- Nearby attractions in Shirokanedai/Minato area
 - A call to action to book directly
 
 Return as JSON:
@@ -43,19 +43,19 @@ Return as JSON:
     type: "ja-family",
     lang: "ja",
     category: "ファミリー旅行",
-    prompt: `神田・秋葉原エリアへのファミリー旅行を計画している日本人家族向けのブログ記事を書いてください。
+    prompt: `白金台エリアへのファミリー・グループ旅行を計画している方向けのブログ記事を書いてください。
 
-ホテル情報：
-- 名称：ホテルプライムイン神田
-- 場所：淡路町駅・小川町駅 徒歩3分、秋葉原駅 徒歩13分
-- 設備：iMac・Nintendo Switch 2・Nintendo Switch・Netflix・Disney+・ポケットWi-Fi・ドラム式洗濯機・ガラス張りシャワー・Emma Premiumベッド・独立トイレ
-- 料金：¥30,000〜/泊
-- 予約：https://beds24.com/booking.php?propid=274118&referer=BookingLink
+物件情報：
+- 名称：ぷらっとハウス白金台
+- 場所：白金台駅（東京メトロ南北線・都営三田線）徒歩2分
+- 設備：3階建て一棟貸し切り・最大11名・駐車場2台無料・Netflix・Disney+・Nintendo Switch・ポケットWi-Fi・10ギガインターネット
+- 料金：¥40,000〜/泊
+- 予約：https://beds24.com/booking.php?propid=305756&referer=BookingLink
 
 600〜800字の記事を書いてください。構成：
-- 家族旅行に神田・秋葉原が最適な理由
-- 子どもが喜ぶホテルの設備紹介
-- 周辺のファミリー向けスポット
+- 一棟貸し切りがホテルより家族・グループ旅行に向いている理由
+- ぷらっとハウス白金台の設備紹介
+- 白金台・港区エリアの観光スポット
 - 予約への誘導
 
 JSON形式で返してください：
@@ -70,17 +70,17 @@ JSON形式で返してください：
     type: "ja-sightseeing",
     lang: "ja",
     category: "観光情報",
-    prompt: `神田・秋葉原エリアの観光情報をまとめたブログ記事を書いてください。
+    prompt: `白金台・港区エリアの観光情報をまとめたブログ記事を書いてください。
 
-記事の最後に以下のホテルを自然な流れで紹介してください：
-- ホテルプライムイン神田（淡路町駅 徒歩3分）
-- 予約：https://beds24.com/booking.php?propid=274118&referer=BookingLink
+記事の最後に以下の物件を自然な流れで紹介してください：
+- ぷらっとハウス白金台（白金台駅 徒歩2分・一棟貸し切り・最大11名）
+- 予約：https://beds24.com/booking.php?propid=305756&referer=BookingLink
 
 600〜800字の記事。構成：
-- 神田・秋葉原エリアの魅力
-- おすすめ観光スポット5〜7か所（具体的な場所名）
+- 白金台・港区エリアの魅力
+- おすすめ観光スポット5〜7か所（白金台、広尾、六本木、麻布台など）
 - グルメ・ショッピング情報
-- アクセスの良さとホテルの紹介
+- 一棟貸し切りでゆったり滞在の紹介
 
 JSON形式で返してください：
 {
