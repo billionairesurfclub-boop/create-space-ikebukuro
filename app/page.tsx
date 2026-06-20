@@ -153,8 +153,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden h-64 bg-gray-100 flex items-center justify-center">
-              <p className="text-gray-400 text-sm">Googleマップ準備中</p>
+            <div className="rounded-2xl overflow-hidden h-64">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.1214027365631!2d139.72320839062888!3d35.638570698178256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b045db388d3%3A0x1b3e70eedb30d622!2z44CSMTA4LTAwNzEg5p2x5Lqs6YO95riv5Yy655m96YeR5Y-w77yU5LiB55uu77yR77yW4oiS77yV!5e0!3m2!1sja!2sjp!4v1781947368421!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </section>
