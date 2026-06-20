@@ -2,8 +2,8 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata = {
-  title: "ブログ | ホテルプライムイン神田",
-  description: "神田・秋葉原エリアの観光情報、ファミリー旅行のヒント、外国人向け旅行情報など。",
+  title: "ブログ | ぷらっとハウス白金台",
+  description: "白金台・港区エリアの観光情報、ファミリー旅行のヒント、グループ旅行情報など。",
 };
 
 export default function BlogPage() {
@@ -12,7 +12,7 @@ export default function BlogPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">ブログ</h1>
-      <p className="text-gray-500 mb-12">神田・秋葉原エリアの観光情報・旅行ガイド</p>
+      <p className="text-gray-500 mb-12">白金台・港区エリアの観光情報・旅行ガイド</p>
 
       {posts.length === 0 ? (
         <p className="text-gray-400">記事はまだありません。</p>
