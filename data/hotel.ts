@@ -67,7 +67,7 @@ export const rooms = [
       ja: "2階の寝室。クイーンサイズベッドでゆったりとお休みいただけます。",
       en: "Second floor bedroom with a comfortable queen-size bed.",
     },
-    images: ["room-2f-a-1.jpg"],
+    images: ["shiro-bedroom1-01.jpg"],
   },
   {
     id: "room-2f-b",
@@ -79,7 +79,7 @@ export const rooms = [
       ja: "2階の寝室。クイーンサイズベッドとシングルベッドを完備。",
       en: "Second floor bedroom with queen and single beds.",
     },
-    images: ["room-2f-b-1.jpg"],
+    images: ["shiro-bedroom2-01.jpg"],
   },
   {
     id: "room-3f-living",
@@ -91,7 +91,7 @@ export const rooms = [
       ja: "3階の広々としたリビング。ソファベッド2台でグループ利用にも対応。",
       en: "Spacious third floor living room with 2 sofa beds for groups.",
     },
-    images: ["room-3f-1.jpg"],
+    images: ["shiro-living-01.jpg"],
   },
 ];
 

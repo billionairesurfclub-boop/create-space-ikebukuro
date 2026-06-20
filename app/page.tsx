@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { hotel, amenities, rooms, faqs } from "@/data/hotel";
 import { getAllPosts } from "@/lib/blog";
@@ -70,8 +71,8 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {rooms.map((room) => (
                 <div key={room.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-                  <div className="h-48 w-full bg-gray-100 flex items-center justify-center">
-                    <p className="text-gray-400 text-sm">写真準備中</p>
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image src={`/${room.images[0]}`} alt={room.name.ja} fill className="object-cover" />
                   </div>
                   <div className="p-5">
                     <div className="flex justify-between items-start mb-2">
@@ -80,6 +81,32 @@ export default function Home() {
                     </div>
                     <p className="text-sm text-gray-500 mb-3">{room.bedType.ja} · 最大{room.maxGuests}名</p>
                     <p className="text-sm text-gray-600">{room.description.ja}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-14 px-4 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">館内写真</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[
+                { src: "/shiro-gaikan-01.jpg", alt: "外観" },
+                { src: "/shiro-living-01.jpg", alt: "リビング" },
+                { src: "/shiro-living-02.jpg", alt: "リビング" },
+                { src: "/shiro-bedroom1-01.jpg", alt: "寝室１" },
+                { src: "/shiro-bedroom2-01.jpg", alt: "寝室２" },
+                { src: "/shiro-bedroom3-01.jpg", alt: "寝室３" },
+                { src: "/shiro-kitchen-01.jpg", alt: "キッチン" },
+                { src: "/shiro-bath-01.jpg", alt: "バスルーム" },
+                { src: "/shiro-living-03.jpg", alt: "リビング" },
+              ].map((img) => (
+                <div key={img.src} className="relative h-48 rounded-2xl overflow-hidden">
+                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-3">
+                    <p className="text-white text-xs font-medium">{img.alt}</p>
                   </div>
                 </div>
               ))}
