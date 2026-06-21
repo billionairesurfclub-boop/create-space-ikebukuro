@@ -43,6 +43,25 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-SRHH2HXQZZ');
         `}</Script>
+        <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LodgingBusiness",
+          "name": "クリエイトスペース東池袋",
+          "url": "https://ikebukuro.create-space.jp",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "豊島区",
+            "addressRegion": "東京都",
+            "addressCountry": "JP"
+          },
+          "checkinTime": "16:00",
+          "checkoutTime": "11:00",
+          "priceRange": "¥10,000〜",
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Netflix", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "高速インターネット", "value": true }
+          ]
+        }) }} />
         {children}
       </body>
     </html>
