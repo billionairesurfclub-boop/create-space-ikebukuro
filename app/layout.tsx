@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   verification: {
     google: "NBCzX_w_wF2RdfjdOVZcRXM0ZB57hSsgI35-j8f5dW8",
   },
-  title: "クリエイトスペース池袋 | 池袋 全6室・高速インターネット完備のホテル",
+  title: "クリエイトスペース東池袋 | 池袋 コスパ最強 清潔・快適ホテル",
   description:
-    "池袋駅徒歩10分。全6室・最大4名・高速インターネット・Netflix完備。ファミリー・グループ旅行・ビジネスに最適。公式サイト直接予約で最安値保証。",
+    "サンシャインシティ徒歩5分。清潔・快適・Nintendo Switch・洗濯機完備。¥20,000〜で最大4名。長期滞在にも対応。池袋で最高のコスパ。直接予約で最安値保証。",
   keywords:
-    "クリエイトスペース池袋, 池袋 ホテル, 豊島区 ホテル, 池袋 ファミリーホテル, 池袋 グループ旅行, Netflix ホテル 池袋",
+    "クリエイトスペース池袋, 池袋 ホテル, 池袋 コスパ, 池袋 安い ホテル, 東池袋 宿泊, Ikebukuro hotel, Ikebukuro budget hotel, 池袋 ファミリー, サンシャインシティ 近い ホテル, Nintendo Switch ホテル, 洗濯機付き ホテル 池袋, 池袋 長期滞在, Tokyo affordable hotel",
   openGraph: {
     title: "クリエイトスペース池袋 | 池袋 全6室・高速インターネット完備のホテル",
     description:

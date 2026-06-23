@@ -32,13 +32,13 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm text-gray-500 mb-3">Ikebukuro · Toshima-ku Tokyo</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">{hotel.catchcopy.ja}</h2>
-            <p className="text-gray-600 text-lg mb-4">全6室・最大4名・高速インターネット・Netflix完備。</p>
-            <p className="text-gray-500 text-base mb-8">池袋駅徒歩10分。観光・ビジネスに最適なホテル。</p>
+            <p className="text-gray-600 text-lg mb-4">サンシャインシティ徒歩5分。清潔・快適・Nintendo Switch・洗濯機完備。</p>
+            <p className="text-gray-500 text-base mb-8">コスパ最強。¥20,000〜で最大4名。長期滞在にも対応。</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#booking" className="bg-gray-900 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-gray-700 transition">今すぐ予約する</a>
               <a href="#rooms" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full text-base hover:bg-gray-50 transition">客室を見る</a>
             </div>
-            <p className="text-sm text-gray-400 mt-4">公式サイト直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
+            <p className="text-sm text-gray-400 mt-4">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
           </div>
         </section>
 
@@ -176,14 +176,15 @@ export default function Home() {
 
         <section id="booking" className="py-20 px-4 bg-gray-900 text-white">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-3">ご予約</h2>
-            <p className="text-gray-400 mb-2">公式サイト直接予約で最安値保証</p>
+            <h2 className="text-2xl font-bold mb-3">池袋で最高のコスパを体験</h2>
+            <p className="text-gray-400 mb-2">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
             <p className="text-gray-400 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
             <div className="bg-gray-800 rounded-2xl p-6 mb-6">
               <p className="text-3xl font-bold mb-1">¥{hotel.price.min.toLocaleString()}〜</p>
-              <p className="text-gray-400 text-sm">1泊あたり（税込）· 最大4名</p>
+              <p className="text-gray-400 text-sm">1泊あたり（税込）+ 清掃費 ¥4,950 · 最大4名</p>
+              <p className="text-gray-500 text-xs mt-2">4名利用時 1人あたり約¥6,238〜</p>
             </div>
-            <a href={hotel.bookingUrl} className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-bold hover:bg-gray-100 transition">空室を確認して予約する</a>
+            <a href={hotel.bookingUrl} target="_blank" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-bold hover:bg-gray-100 transition">今すぐ最安値で予約する</a>
           </div>
         </section>
       </main>

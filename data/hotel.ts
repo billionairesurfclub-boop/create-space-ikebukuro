@@ -5,8 +5,8 @@ export const hotel = {
     en: "Create Space Higashi-Ikebukuro",
   },
   catchcopy: {
-    ja: "東池袋に、自分だけの快適空間を。全6室・充実設備のホテル",
-    en: "Your comfortable stay in Higashi-Ikebukuro. 6 rooms with full amenities.",
+    ja: "池袋で最高のコスパ。清潔・快適・設備充実のホテル",
+    en: "Best value in Ikebukuro. Clean, comfortable, fully equipped hotel.",
   },
   address: {
     postalCode: "170-0013",
