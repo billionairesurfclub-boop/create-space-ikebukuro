@@ -21,6 +21,7 @@ export default function Home() {
             <a href="#access" className="hover:text-gray-900">アクセス</a>
             <a href="#faq" className="hover:text-gray-900">FAQ</a>
             <Link href="/blog" className="hover:text-gray-900">ブログ</Link>
+            <Link href="/en" className="hover:text-gray-900">English</Link>
           </nav>
           <a href="#booking" className="bg-gray-900 text-white text-sm px-5 py-2 rounded-full hover:bg-gray-700 transition">予約する</a>
         </div>

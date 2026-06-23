@@ -21,10 +21,17 @@ export const metadata: Metadata = {
     title: "クリエイトスペース池袋 | 池袋 全6室・高速インターネット完備のホテル",
     description:
       "池袋駅徒歩10分。全6室・Netflix・高速インターネット完備。最大4名。",
-    url: "https://create-space.jp",
+    url: "https://ikebukuro.create-space.jp",
     siteName: "Create Space Ikebukuro",
     locale: "ja_JP",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://ikebukuro.create-space.jp",
+    languages: {
+      "ja": "https://ikebukuro.create-space.jp",
+      "en": "https://ikebukuro.create-space.jp/en",
+    },
   },
 };
 
