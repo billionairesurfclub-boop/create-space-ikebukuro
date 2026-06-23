@@ -38,7 +38,7 @@ export default function Home() {
               <a href="#booking" className="bg-gray-900 text-white px-8 py-3 rounded-full text-base font-medium hover:bg-gray-700 transition">今すぐ予約する</a>
               <a href="#rooms" className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full text-base hover:bg-gray-50 transition">客室を見る</a>
             </div>
-            <p className="text-sm text-gray-400 mt-4">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
+            <p className="text-sm text-gray-500 mt-4">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
           </div>
         </section>
 
@@ -123,6 +123,7 @@ export default function Home() {
             </div>
             <div className="rounded-2xl overflow-hidden h-64">
               <iframe
+                title="クリエイトスペース東池袋 Google Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.74179683074!2d139.71706947579!3d35.73256817257074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d657234396d%3A0x240cc5c84f5c4b0d!2z44CSMTcwLTAwMTMg5p2x5Lqs6YO96LGK5bO25Yy65p2x5rGg6KKL77yS5LiB55uu77yV77yQ4oiS77yUIOOCr-ODquOCqOOCpOODiOOCueODmuODvOOCueadseaxoOiiiw!5e0!3m2!1sja!2sjp!4v1781953703407!5m2!1sja!2sjp"
                 width="100%"
                 height="100%"
@@ -144,7 +145,7 @@ export default function Home() {
                 {latestPosts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`}>
                     <div className="border border-gray-100 rounded-2xl p-5 hover:shadow-md transition cursor-pointer h-full">
-                      <span className="text-xs text-gray-400 mb-2 block">{post.lang === "en" ? "🇬🇧 English" : "🇯🇵 日本語"} · {post.category}</span>
+                      <span className="text-xs text-gray-500 mb-2 block">{post.lang === "en" ? "🇬🇧 English" : "🇯🇵 日本語"} · {post.category}</span>
                       <h3 className="font-bold text-gray-900 mb-2 text-sm">{post.title}</h3>
                       <p className="text-xs text-gray-500 line-clamp-2">{post.excerpt}</p>
                     </div>
@@ -177,11 +178,11 @@ export default function Home() {
         <section id="booking" className="py-20 px-4 bg-gray-900 text-white">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-3">池袋で最高のコスパを体験</h2>
-            <p className="text-gray-400 mb-2">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
-            <p className="text-gray-400 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
+            <p className="text-gray-500 mb-2">OTAより安い公式直接予約 · 最安値保証 · 7日前まで無料キャンセル</p>
+            <p className="text-gray-500 text-sm mb-8">チェックイン {hotel.checkIn} · チェックアウト {hotel.checkOut} · {hotel.cancelPolicy}</p>
             <div className="bg-gray-800 rounded-2xl p-6 mb-6">
               <p className="text-3xl font-bold mb-1">¥{hotel.price.min.toLocaleString()}〜</p>
-              <p className="text-gray-400 text-sm">1泊あたり（税込）+ 清掃費 ¥4,950 · 最大4名</p>
+              <p className="text-gray-500 text-sm">1泊あたり（税込）+ 清掃費 ¥4,950 · 最大4名</p>
               <p className="text-gray-500 text-xs mt-2">4名利用時 1人あたり約¥6,238〜</p>
             </div>
             <a href={hotel.bookingUrl} target="_blank" className="inline-block bg-white text-gray-900 px-10 py-4 rounded-full text-base font-bold hover:bg-gray-100 transition">今すぐ最安値で予約する</a>
