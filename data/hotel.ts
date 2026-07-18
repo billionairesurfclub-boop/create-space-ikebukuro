@@ -63,7 +63,7 @@ export const rooms = [
       ja: "2階の落ち着いた客室。ダブルベッド2台でファミリーやグループに最適。",
       en: "Comfortable room on the 2nd floor with 2 double beds.",
     },
-    images: ["room-201-1.jpg"],
+    images: ["room-201-1.png"],
   },
   {
     id: "room-202",
@@ -75,7 +75,7 @@ export const rooms = [
       ja: "2階の客室。広々としたスペースでゆったりとお過ごしいただけます。",
       en: "Spacious room on the 2nd floor with 2 double beds.",
     },
-    images: ["room-202-1.jpg"],
+    images: ["room-202-1.png"],
   },
   {
     id: "room-301",
@@ -87,7 +87,7 @@ export const rooms = [
       ja: "3階の客室。静かな環境でゆっくりとお休みいただけます。",
       en: "Quiet room on the 3rd floor with 2 double beds.",
     },
-    images: ["room-301-1.jpg"],
+    images: ["room-301-1.png"],
   },
   {
     id: "room-302",
@@ -99,7 +99,7 @@ export const rooms = [
       ja: "3階の客室。充実の設備で快適なご滞在をお楽しみください。",
       en: "Well-equipped room on the 3rd floor with 2 double beds.",
     },
-    images: ["room-302-1.jpg"],
+    images: ["room-302-1.png"],
   },
   {
     id: "room-401",
@@ -111,7 +111,7 @@ export const rooms = [
       ja: "4階の上層階客室。眺望も楽しめる快適なお部屋です。",
       en: "Upper floor room with a pleasant view and 2 double beds.",
     },
-    images: ["room-401-1.jpg"],
+    images: ["room-401-1.png"],
   },
   {
     id: "room-402",
@@ -123,7 +123,7 @@ export const rooms = [
       ja: "4階の上層階客室。池袋の街を感じながら快適にお過ごしください。",
       en: "Top floor room overlooking Ikebukuro with 2 double beds.",
     },
-    images: ["room-402-1.jpg"],
+    images: ["room-402-1.png"],
   },
 ];
 

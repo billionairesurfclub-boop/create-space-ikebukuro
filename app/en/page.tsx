@@ -71,8 +71,8 @@ export default function HomeEn() {
             <div className="grid md:grid-cols-3 gap-6">
               {rooms.map((room) => (
                 <div key={room.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-                  <div className="relative h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                    <span className="text-4xl">🏨</span>
+                  <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                    <Image src={`/${room.images[0]}`} alt={room.name.en} fill className="object-cover" />
                   </div>
                   <div className="p-5">
                     <div className="flex justify-between items-start mb-2">
