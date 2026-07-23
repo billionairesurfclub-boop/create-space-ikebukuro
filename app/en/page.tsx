@@ -169,6 +169,7 @@ export default function HomeEn() {
           <p className="mb-2">{hotel.name.en}</p>
           <p className="mb-2">{hotel.address.en}</p>
           <p className="mb-4">TEL: {hotel.phone}</p>
+          <p className="mb-4"><Link href="/privacy" className="underline hover:text-gray-300">Privacy Policy</Link></p>
           <p>© 2025 PlanPlan LLC. All rights reserved.</p>
         </div>
       </footer>

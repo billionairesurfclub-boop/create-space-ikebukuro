@@ -195,6 +195,7 @@ export default function Home() {
           <p className="mb-2">{hotel.name.ja}</p>
           <p className="mb-2">{hotel.address.ja}</p>
           <p className="mb-4">TEL: {hotel.phone}</p>
+          <p className="mb-4"><Link href="/privacy" className="underline hover:text-gray-300">プライバシーポリシー</Link></p>
           <p>© 2025 合同会社プランプラン All rights reserved.</p>
         </div>
       </footer>
