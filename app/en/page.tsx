@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
 import { hotel, amenities, rooms, faqs } from "@/data/hotel";
 import { getAllPosts } from "@/lib/blog";
 
@@ -9,7 +10,7 @@ export default function HomeEn() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 relative">
         <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
           <div>
             <p className="text-xs text-gray-500">Create Space</p>
@@ -22,6 +23,16 @@ export default function HomeEn() {
             <a href="#faq" className="hover:text-gray-900">FAQ</a>
             <Link href="/" className="hover:text-gray-900">日本語</Link>
           </nav>
+          <MobileNav
+            anchorItems={[
+              { label: "Rooms", href: "#rooms" },
+              { label: "Amenities", href: "#amenities" },
+              { label: "Access", href: "#access" },
+              { label: "FAQ", href: "#faq" },
+            ]}
+            langSwitchLabel="日本語"
+            langSwitchHref="/"
+          />
           <a href="#booking" className="bg-gray-900 text-white text-sm px-5 py-2 rounded-full hover:bg-gray-700 transition">Book Now</a>
         </div>
       </header>

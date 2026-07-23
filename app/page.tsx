@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
 import { hotel, amenities, rooms, faqs } from "@/data/hotel";
 import { getAllPosts } from "@/lib/blog";
 
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 relative">
         <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
           <div>
             <p className="text-xs text-gray-500">Create Space</p>
@@ -23,6 +24,17 @@ export default function Home() {
             <Link href="/blog" className="hover:text-gray-900">ブログ</Link>
             <Link href="/en" className="hover:text-gray-900">English</Link>
           </nav>
+          <MobileNav
+            anchorItems={[
+              { label: "客室", href: "#rooms" },
+              { label: "設備", href: "#amenities" },
+              { label: "アクセス", href: "#access" },
+              { label: "FAQ", href: "#faq" },
+              { label: "ブログ", href: "/blog" },
+            ]}
+            langSwitchLabel="English"
+            langSwitchHref="/en"
+          />
           <a href="#booking" className="bg-gray-900 text-white text-sm px-5 py-2 rounded-full hover:bg-gray-700 transition">予約する</a>
         </div>
       </header>
